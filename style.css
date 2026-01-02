@@ -18,12 +18,14 @@ body {
   font-family: "Montserrat", sans-serif;
   color: var(--font-dark-color);
   background: var(--bg-light-color);
+  overflow-x: hidden;
 }
 
 #container {
   max-width: 1150px;
   min-height: 100vh;
   margin: 0 auto;
+  padding: 1rem 1.5rem;
   display: grid;
   place-content: center;
   gap: 1.5rem;
@@ -36,21 +38,31 @@ h2 {
 }
 
 .joke_container {
+  max-width: 450px;
   height: 200px;
+}
+
+#joke_txt {
   font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: left;
 }
 
 img {
   max-width: 125px;
   height: auto;
   position: absolute;
-  left: -150px;
-  bottom: 1rem;
-  transition: all 0.4s ease-out;
+  left: 50%;
+  top: -100%;
+  transform: translate(-50%, 0);
+  transition: all 0.5s ease;
 }
 
 .btn {
   padding: 1rem 1.5rem;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
   background: var(--btn-light-color);
   border-radius: 10px;
   font-size: 1rem;
@@ -71,6 +83,5 @@ img {
 }
 
 .btn:hover ~ img {
-  /* transform: translateX(150px) scale(0.95); */
-  left: 1rem;
+  top: 1rem;
 }
