@@ -12,6 +12,7 @@
   --bg-light-color: #f6f0d7;
   --font-dark-color: #1b211a;
   --btn-light-color: #c5d89d;
+  --white-color: #fff;
 }
 
 body {
@@ -44,7 +45,7 @@ h2 {
 
 #joke_txt {
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   text-align: left;
 }
 
@@ -84,4 +85,11 @@ img {
 
 .btn:hover ~ img {
   top: 1rem;
+}
+
+/* ========= MEDIA QUERIES ========= */
+@media screen and (max-height: 750px) {
+  img {
+    display: none;
+  }
 }
